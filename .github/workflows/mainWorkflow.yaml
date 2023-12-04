@@ -1,0 +1,25 @@
+name: Package and Push to Downloads
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install lftp and zip
+      run: |
+        sudo apt-get update
+        sudo apt-get -qq install lftp zip
+
+    - name: Create zip file
+      run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
+
+    - name: Upload to SFTP server
+      run: lftp -c "open -u singleziphost,singleziphost sftp://[2a02:8071:a583:1fe0:461e:a1ff:fe39:5c48]; put -O /usr/share/caddy ./currentVersion.zip; quit"
