@@ -1,0 +1,729 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screen.MainMenuScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  name = nona-images
+  action = setbackgroundslideshow
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  identifier = %id=400322%
+  orientation = top-centered
+  x = -75
+  action = movebutton
+  y = 193
+}
+
+customization {
+  identifier = %id=400322%
+  width = 150
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=400322%
+  action = setbuttonlabel
+  value = Multi-Player
+}
+
+customization {
+  identifier = %id=400322%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank-split-hover.png
+  backgroundnormal = resources\buttonmc-blank-split-default.png
+}
+
+customization {
+  identifier = %id=400322%
+  path = resources\button-hover - 1.wav
+  action = addhoversound
+}
+
+customization {
+  identifier = %id=400322%
+  path = resources/button-click -1.wav
+  action = setbuttonclicksound
+}
+
+customization {
+  identifier = %id=604382%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=400382%
+  orientation = top-centered
+  x = -75
+  action = movebutton
+  y = 214
+}
+
+customization {
+  identifier = %id=400382%
+  width = 150
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=400382%
+  action = setbuttonlabel
+  value = Settings
+}
+
+customization {
+  identifier = %id=400382%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank-split-hover.png
+  backgroundnormal = resources\buttonmc-blank-split-default.png
+}
+
+customization {
+  identifier = %id=400382%
+  path = resources\button-hover - 2.wav
+  action = addhoversound
+}
+
+customization {
+  identifier = %id=400382%
+  path = resources/button-click -1.wav
+  action = setbuttonclicksound
+}
+
+customization {
+  identifier = %id=502382%
+  orientation = top-centered
+  x = -75
+  action = movebutton
+  y = 277
+}
+
+customization {
+  identifier = %id=502382%
+  width = 150
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=502382%
+  action = setbuttonlabel
+  value = Quit
+}
+
+customization {
+  identifier = %id=502382%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank-split-hover.png
+  backgroundnormal = resources\buttonmc-blank-split-default.png
+}
+
+customization {
+  identifier = %id=502382%
+  path = resources\button-hover - 5.wav
+  action = addhoversound
+}
+
+customization {
+  identifier = %id=502382%
+  path = resources/button-click -1.wav
+  action = setbuttonclicksound
+}
+
+customization {
+  identifier = %id=376382%
+  orientation = top-centered
+  x = -75
+  action = movebutton
+  y = 257
+}
+
+customization {
+  identifier = %id=376382%
+  width = 150
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=376382%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank-split-hover.png
+  backgroundnormal = resources\buttonmc-blank-split-default.png
+}
+
+customization {
+  identifier = %id=376382%
+  path = resources\button-hover - 4.wav
+  action = addhoversound
+}
+
+customization {
+  identifier = %id=376382%
+  path = resources/button-click -1.wav
+  action = setbuttonclicksound
+}
+
+customization {
+  identifier = %id=400298%
+  orientation = top-centered
+  x = -75
+  action = movebutton
+  y = 172
+}
+
+customization {
+  identifier = %id=400298%
+  width = 150
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=400298%
+  action = setbuttonlabel
+  value = Single-Player
+}
+
+customization {
+  identifier = %id=400298%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank-split-hover.png
+  backgroundnormal = resources\buttonmc-blank-split-default.png
+}
+
+customization {
+  identifier = %id=400298%
+  path = resources\button-hover.wav
+  action = addhoversound
+}
+
+customization {
+  identifier = %id=400298%
+  path = resources/button-click -1.wav
+  action = setbuttonclicksound
+}
+
+customization {
+  identifier = %id=400346%
+  orientation = top-centered
+  x = -75
+  action = movebutton
+  y = 235
+}
+
+customization {
+  identifier = %id=400346%
+  width = 150
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=400346%
+  action = setbuttonlabel
+  value = Mod List
+}
+
+customization {
+  identifier = %id=400346%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank-split-hover.png
+  backgroundnormal = resources\buttonmc-blank-split-default.png
+}
+
+customization {
+  identifier = %id=400346%
+  path = resources\button-hover - 3.wav
+  action = addhoversound
+}
+
+customization {
+  identifier = %id=400346%
+  path = resources/button-click -1.wav
+  action = setbuttonclicksound
+}
+
+customization {
+  identifier = %id=502346%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=376346%
+  orientation = bottom-centered
+  x = -20
+  action = movebutton
+  y = -23
+}
+
+customization {
+  identifier = %id=376346%
+  width = 40
+  action = resizebutton
+  height = 20
+}
+
+customization {
+  identifier = %id=376346%
+  action = setbuttonlabel
+  value = Quark
+}
+
+customization {
+  identifier = %id=376346%
+  loopbackgroundanimations = true
+  restartbackgroundanimations = true
+  action = setbuttontexture
+  backgroundhovered = resources\buttonmc-blank2-split-hover.png
+  backgroundnormal = resources\buttonmc-blank2-split-default.png
+}
+
+customization {
+  path = resources/logo.png
+  orientation = top-centered
+  x = -138
+  width = 277
+  action = addtexture
+  actionid = 4d87675e-af51-4bf6-b5a9-1b5867a542751631214098801
+  y = 7
+  height = 165
+}
+
+customization {
+  hoversound = resources/button-hover - 6.wav
+  orientation = top-centered
+  restartbackgroundanimations = true
+  buttonaction = openlink
+  backgroundhovered = resources\buttonmc-blank2-split-hover.png
+  label = Website
+  clicksound = resources/button-click -1.wav
+  loopbackgroundanimations = true
+  x = -75
+  width = 70
+  actionid = 620a23ac-a2e7-4268-bfca-eaf63e320c7c1633105727613
+  action = addbutton
+  y = 298
+  backgroundnormal = resources\buttonmc-blank2-split-default.png
+  value = https://www.aperturegaming.xyz/
+  height = 20
+}
+
+customization {
+  hoversound = resources/button-hover - 7.wav
+  orientation = top-centered
+  restartbackgroundanimations = true
+  buttonaction = openlink
+  backgroundhovered = resources\buttonmc-blank2-split-hover.png
+  label = Discord
+  clicksound = resources/button-click -1.wav
+  loopbackgroundanimations = true
+  x = 5
+  width = 70
+  actionid = 76053576-4e7f-443b-bc9e-ee6b89fbf2ba1633105727636
+  action = addbutton
+  y = 298
+  backgroundnormal = resources\buttonmc-blank2-split-default.png
+  value = http://discord.gg/jRpUJga
+  height = 20
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 97917a48-5347-4e9f-a875-7794f98391221631217014776
+  y = -67
+  scale = 1.0
+  alignment = left
+  value = §0§lThank you for playing §0§l%playername%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 513c8173-ab41-4f9f-8996-4dc817d870191631218095485
+  y = -56
+  scale = 1.0
+  alignment = left
+  value = §0§lThere are currently §0§l%loadedmods% §0§lmods loaded.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = f4acb625-8bd0-4ca4-91cd-a8858c88c0621631218152443
+  y = -45
+  scale = 1.0
+  alignment = left
+  value = §0§lThe current forge version is §0§l%version:forge%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 33f786be-8efa-4c22-9138-98b4a28e870a1631218368796
+  y = -34
+  scale = 1.0
+  alignment = left
+  value = §0§lYou are currently playing §0§l%mcversion% §0§lMinecraft.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 54d66127-5f14-41cd-abec-9fe156ea70e61631218231891
+  y = -23
+  scale = 1.0
+  alignment = left
+  value = §0§lTekxit Journey §0§lCreated by §0§lRawrMaoster§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = f5573257-75b8-4d2a-af69-df2dd612465c1631218307839
+  y = -12
+  scale = 1.0
+  alignment = left
+  value = §0§lCopyright Mojang AB. Not Affiliated.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 5
+  action = addtext
+  actionid = 97917a48-5347-4e9f-a875-7794f98391221631217014776
+  y = -68
+  scale = 1.0
+  alignment = left
+  value = §0§lThank you for playing §0§l%playername%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 5
+  action = addtext
+  actionid = 513c8173-ab41-4f9f-8996-4dc817d870191631218095485
+  y = -57
+  scale = 1.0
+  alignment = left
+  value = §0§lThere are currently §0§l%loadedmods% §0§lmods loaded.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 5
+  action = addtext
+  actionid = f4acb625-8bd0-4ca4-91cd-a8858c88c0621631218152443
+  y = -46
+  scale = 1.0
+  alignment = left
+  value = §0§lThe current forge version is §0§l%version:forge%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 5
+  action = addtext
+  actionid = 33f786be-8efa-4c22-9138-98b4a28e870a1631218368796
+  y = -35
+  scale = 1.0
+  alignment = left
+  value = §0§lYou are currently playing §0§l%mcversion% §0§lMinecraft.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 5
+  action = addtext
+  actionid = 54d66127-5f14-41cd-abec-9fe156ea70e61631218231891
+  y = -24
+  scale = 1.0
+  alignment = left
+  value = §0§lTekxit Journey §0§lCreated by §0§lRawrMaoster§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 5
+  action = addtext
+  actionid = f5573257-75b8-4d2a-af69-df2dd612465c1631218307839
+  y = -13
+  scale = 1.0
+  alignment = left
+  value = §0§lCopyright Mojang AB. Not Affiliated.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 97917a48-5347-4e9f-a875-7794f98391221631217014776
+  y = -69
+  scale = 1.0
+  alignment = left
+  value = §0§lThank you for playing §0§l%playername%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 513c8173-ab41-4f9f-8996-4dc817d870191631218095485
+  y = -58
+  scale = 1.0
+  alignment = left
+  value = §0§lThere are currently §0§l%loadedmods% §0§lmods loaded.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = f4acb625-8bd0-4ca4-91cd-a8858c88c0621631218152443
+  y = -47
+  scale = 1.0
+  alignment = left
+  value = §0§lThe current forge version is §0§l%version:forge%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 33f786be-8efa-4c22-9138-98b4a28e870a1631218368796
+  y = -36
+  scale = 1.0
+  alignment = left
+  value = §0§lYou are currently playing §0§l%mcversion% §0§lMinecraft.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 54d66127-5f14-41cd-abec-9fe156ea70e61631218231891
+  y = -25
+  scale = 1.0
+  alignment = left
+  value = §0§lTekxit Journey §0§lCreated by §0§lRawrMaoster§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = f5573257-75b8-4d2a-af69-df2dd612465c1631218307839
+  y = -14
+  scale = 1.0
+  alignment = left
+  value = §0§lCopyright Mojang AB. Not Affiliated.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 7
+  action = addtext
+  actionid = 97917a48-5347-4e9f-a875-7794f98391221631217014776
+  y = -68
+  scale = 1.0
+  alignment = left
+  value = §0§lThank you for playing §0§l%playername%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 7
+  action = addtext
+  actionid = 513c8173-ab41-4f9f-8996-4dc817d870191631218095485
+  y = -57
+  scale = 1.0
+  alignment = left
+  value = §0§lThere are currently §0§l%loadedmods% §0§lmods loaded.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 7
+  action = addtext
+  actionid = f4acb625-8bd0-4ca4-91cd-a8858c88c0621631218152443
+  y = -46
+  scale = 1.0
+  alignment = left
+  value = §0§lThe current forge version is §0§l%version:forge%§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 7
+  action = addtext
+  actionid = 33f786be-8efa-4c22-9138-98b4a28e870a1631218368796
+  y = -35
+  scale = 1.0
+  alignment = left
+  value = §0§lYou are currently playing §0§l%mcversion% §0§lMinecraft.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 7
+  action = addtext
+  actionid = 54d66127-5f14-41cd-abec-9fe156ea70e61631218231891
+  y = -24
+  scale = 1.0
+  alignment = left
+  value = §0§lTekxit Journey §0§lCreated by §0§lRawrMaoster§0§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 7
+  action = addtext
+  actionid = f5573257-75b8-4d2a-af69-df2dd612465c1631218307839
+  y = -13
+  scale = 1.0
+  alignment = left
+  value = §0§lCopyright Mojang AB. Not Affiliated.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 97917a48-5347-4e9f-a875-7794f98391221631217014776
+  y = -68
+  scale = 1.0
+  alignment = left
+  value = §a§lThank you for playing §c§l%playername%§a§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 513c8173-ab41-4f9f-8996-4dc817d870191631218095485
+  y = -57
+  scale = 1.0
+  alignment = left
+  value = §a§lThere are currently §c§l%loadedmods% §a§lmods loaded.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = f4acb625-8bd0-4ca4-91cd-a8858c88c0621631218152443
+  y = -46
+  scale = 1.0
+  alignment = left
+  value = §a§lThe current forge version is §c§l%version:forge%§a§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 33f786be-8efa-4c22-9138-98b4a28e870a1631218368796
+  y = -35
+  scale = 1.0
+  alignment = left
+  value = §a§lYou are currently playing §c§l%mcversion% §a§lMinecraft.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = 54d66127-5f14-41cd-abec-9fe156ea70e61631218231891
+  y = -24
+  scale = 1.0
+  alignment = left
+  value = §2§lTekxit Journey §a§lCreated by §d§lRawrMaoster§a§l.
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 6
+  action = addtext
+  actionid = f5573257-75b8-4d2a-af69-df2dd612465c1631218307839
+  y = -13
+  scale = 1.0
+  alignment = left
+  value = §4§lCopyright Mojang AB. Not Affiliated.
+}
+
+customization {
+  orientation = top-left
+  audio_source:8dbfd3f7-7a54-420d-b179-ad1ef318e42f1652135898694 = resources/background-music.ogg;EXTERNAL_LOCAL;50;0
+  loop = true
+  channel = master
+  x = 0
+  width = 50
+  action = custom_layout_element:fancymenu_extension:audio_item
+  actionid = 3253a7ff-1d97-41be-ac43-720dfd152a071652135450918
+  y = 0
+  once_per_session = false
+  height = 50
+}
+

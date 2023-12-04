@@ -1,0 +1,128 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.screen.MainMenuScreen
+  randomgroup = 1
+  renderorder = foreground
+  randommode = false
+  randomonlyfirsttime = false
+}
+
+customization {
+  path = menu/screen.png
+  action = texturizebackground
+}
+
+customization {
+  keepaspectratio = false
+  action = backgroundoptions
+}
+
+customization {
+  path = menu/title.png
+  orientation = top-left
+  x = 263
+  width = 754
+  action = addtexture
+  actionid = 64cc058a-e04d-4f39-a454-d94f2eace96e1701569711261
+  y = 99
+  height = 100
+}
+
+customization {
+  orientation = top-left
+  basecolor = #ffff00
+  shadow = true
+  rotation = 20.0
+  x = 248
+  actionid = 720b3ec5-5352-429e-9b1f-4b788219f00d1701569729570
+  action = addsplash
+  y = 157
+  scale = 1.0
+  refresh = false
+  text = Es tut mir so leid
+  bouncing = true
+}
+
+customization {
+  showname = true
+  orientation = top-left
+  crouching = false
+  x = 300
+  slim = false
+  actionid = 3afccf50-f613-4711-8e27-885b198784531701569975973
+  action = addentity
+  y = 511
+  scale = 30
+  playername = %playername%
+  parrot = false
+}
+
+customization {
+  orientation = top-left
+  loop = true
+  audio_source:c57e100c-8b0d-4899-8519-516c2572dbba1701570045756 = menu/Serenity.ogg;EXTERNAL_LOCAL;100;0
+  channel = master
+  x = 617
+  width = 50
+  action = custom_layout_element:fancymenu_extension:audio_item
+  actionid = 6dcfadfd-870f-4a73-a902-ef06e9ad962d1701570033141
+  y = 391
+  once_per_session = false
+  height = 50
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_multiplayer_button%
+  action = setbuttonlabel
+  value = Du hast auch keine Freunde
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_accessibility_button%
+  action = setbuttonlabel
+  value = <3
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_options_button%
+  action = setbuttonlabel
+  value = Tinder ?!
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_quit_button%
+  action = setbuttonlabel
+  value = Suicide
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_language_button%
+  action = setbuttonlabel
+  value = L
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_singleplayer_button%
+  action = setbuttonlabel
+  value = Du hast keine Freunde
+}
+
+customization {
+  identifier = %id=button_compatibility_id:forge_titlescreen_mods_button%
+  action = setbuttonlabel
+  value = Allah
+}
+
+customization {
+  identifier = %id=button_compatibility_id:mc_titlescreen_realms_button%
+  action = setbuttonlabel
+  value = Rent an E-Girl
+}
+
+customization {
+  identifier = %id=376346%
+  action = setbuttonlabel
+  value = Ü
+}
+
