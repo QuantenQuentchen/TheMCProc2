@@ -16,19 +16,21 @@ jobs:
     - name: Install zip
       run: sudo apt-get update && sudo apt-get -qq install zip
 
-    - name: Create zip file
-      run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
+    - name: Create directory for zip file
+      run: mkdir zipdir
 
-    - name: Upload to FTP server
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+    - name: Create zip file
+      run: zip -r zipdir/currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
+
+    - name: Upload to SFTP server
+      uses: easingthemes/gh-action-sftp@master
       with:
-        server: "[2a02:8071:a583:1fe0:461e:a1ff:fe39:5c48]"
+        host: "sftp://[2a02:8071:a583:1fe0:461e:a1ff:fe39:5c48]"
         username: singleziphost
         password: singleziphost
-        server-dir: /usr/share/caddy
-        local-dir: .
-        exclude: '**/*'
-        include: 'currentVersion.zip'
+        localDir: "zipdir"
+        remoteDir: "/usr/share/caddy"
+        args: "-avz --delete"
 
     - name: Delete zip file
-      run: rm currentVersion.zip
+      run: rm -r zipdir
