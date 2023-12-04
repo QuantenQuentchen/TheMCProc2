@@ -23,7 +23,7 @@ jobs:
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         username: singleziphost
-        host: "[2a02:8071:a583:1fe0:461e:a1ff:fe39:5c48]"
+        server: "[2a02:8071:a583:1fe0:461e:a1ff:fe39:5c48]"
         password: singleziphost
         local_path: "./currentVersion.zip"
         remote_path: "/usr/share/caddy"
