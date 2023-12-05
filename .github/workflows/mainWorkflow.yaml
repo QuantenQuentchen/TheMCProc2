@@ -30,4 +30,4 @@ jobs:
         args: "-o ConnectionTimeout=5"
 
     - name: Delete zip file
-      run: rm -r zipdir
+      run: rm -r currentVersion.zip
