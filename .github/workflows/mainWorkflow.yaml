@@ -18,19 +18,6 @@ jobs:
 
     - name: Create zip file
       run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
-
-    - name: Install miredo
-      run: |
-          sudo apt install -y miredo
-          sudo sed -i 's/ServerAddress	teredo-debian.remlab.net/ServerAddress teredo.iks-jena.de/g' /etc/miredo.conf
-          sudo miredo
-          cat /etc/miredo.conf
-          sleep 1
-          ip addr
-          sleep 1
-          ip addr
-          sleep 1
-          ip addr
       
     - name: Upload to SFTP server
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
