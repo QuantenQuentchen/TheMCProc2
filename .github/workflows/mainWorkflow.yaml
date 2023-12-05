@@ -13,13 +13,21 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install lftp and zip
-      run: |
-        sudo apt-get update
-        sudo apt-get -qq install lftp zip
+    - name: Install zip
+      run: sudo apt-get update && sudo apt-get -qq install zip
 
     - name: Create zip file
       run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
-
+      
     - name: Upload to SFTP server
-      run: lftp -c "open -u singleziphost,singleziphost sftp://[2a02:8071:a583:1fe0:461e:a1ff:fe39:5c48]; put -O /usr/share/caddy ./currentVersion.zip; quit"
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: singleziphost
+        server: "95.208.227.27"
+        password: singleziphost
+        local_path: "./currentVersion.zip"
+        remote_path: "/usr/share/caddy"
+        args: "-o ConnectionTimeout=5"
+
+    - name: Delete zip file
+      run: rm -r currentVersion.zip
