@@ -1,4 +1,3 @@
-/bin
 /cache
 /saves
 /logs
@@ -10,3 +9,8 @@
 /resources
 /saves
 /screenshots
+/ESM
+/journeymap
+/screenshots
+/usercache.json
+/usernamecache.json
