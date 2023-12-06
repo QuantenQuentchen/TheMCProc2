@@ -12,11 +12,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: My step
-      env:
-        MY_ENV_VAR: ${{ secrets.SERVER_USERNAME }}
-      run: echo "The secret is $MY_ENV_VAR"
       
     - name: Install zip
       run: sudo apt-get update && sudo apt-get -qq install zip
@@ -28,14 +23,13 @@ jobs:
     - name: FTP Deployer
       uses: sand4rt/ftp-deployer@v1.4
       with:
-        sftp: true
-        host: "95.208.227.27"
+        host: ${{ SERVER_HOST }}
         port: 22
-        username: "singleziphost"
-        password: "singleziphost"
-        remote_folder: "/usr/share/caddy"
+        username: ${{ secrets.SERVER_USERNAME }}
+        password: ${{ SERVER_PASSWORD }}
+        remote_folder: ${{ SERVER_PATH }}
         local_folder: '.'
-        cleanup: true
+        cleanup: false
         include: '["currentVersion.zip"]'
 
     - name: Delete zip file
