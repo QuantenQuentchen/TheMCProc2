@@ -12,19 +12,19 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+      
     - name: Install zip
       run: sudo apt-get update && sudo apt-get -qq install zip
 
     - name: Create zip file
       run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
-      
+
     - name: Upload to SFTP server
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        username: singleziphost
-        server: "95.208.227.27"
-        password: singleziphost
+        username: ${{ secrets.SERVER_USERNAME }}
+        server: ${{ secrets.SERVER_HOST }}
+        password: ${{ secrets.SERVER_PASSWORD }}
         local_path: "./currentVersion.zip"
         remote_path: "/usr/share/caddy"
         args: "-o ConnectionTimeout=5"
