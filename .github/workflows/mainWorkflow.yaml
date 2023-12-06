@@ -18,7 +18,16 @@ jobs:
 
     - name: Create zip file
       run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
-      
+
+    - name: Upload to SFTP server
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: ${{ secrets.SERVER_USERNAME }}
+        server: "nudelauflauf.ddns.net"
+        password: ${{ secrets.SERVER_PASSWORD }}
+        local_path: ${{ secrets.SERVER_PATH }}
+        remote_path:  "/usr/share/caddy"
+        args: "-o ConnectionTimeout=5"
 
     - name: FTP Deployer
       uses: sand4rt/ftp-deployer@v1.4
