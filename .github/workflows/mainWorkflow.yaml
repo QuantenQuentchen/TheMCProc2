@@ -13,6 +13,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: My step
+      env:
+        MY_ENV_VAR: ${{ secrets.SERVER_USERNAME }}
+      run: echo "The secret is $MY_ENV_VAR"
+      
     - name: Install zip
       run: sudo apt-get update && sudo apt-get -qq install zip
 
@@ -22,11 +27,11 @@ jobs:
     - name: Upload to SFTP server
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        username: "singleziphost"
-        server: "95.208.227.27"
-        password: "singleziphost"
+        username: ${{ secrets.SERVER_USERNAME }}
+        server: ${{ secrets.SERVER_HOST }}
+        password: ${{ secrets.SERVER_PASSWORD }}
         local_path: "./currentVersion.zip"
-        remote_path: "/usr/share/caddy/"
+        remote_path:  ${{ secrets.SERVER_PATH }}
         args: "-o ConnectionTimeout=5"
 
     - name: FTP Deployer
