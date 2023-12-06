@@ -61,15 +61,27 @@ customization {
 customization {
   orientation = top-left
   loop = true
-  audio_source:c57e100c-8b0d-4899-8519-516c2572dbba1701570045756 = menu/Serenity.ogg;EXTERNAL_LOCAL;100;0
   channel = master
   x = 617
   width = 50
   action = custom_layout_element:fancymenu_extension:audio_item
   actionid = 6dcfadfd-870f-4a73-a902-ef06e9ad962d1701570033141
   y = 391
+  audio_source:824c8a91-26f2-4276-bdf2-adf91f2d01bc1701890797376 = menu/Kinder.ogg;EXTERNAL_LOCAL;100;0
   once_per_session = false
   height = 50
+}
+
+customization {
+  orientation = bottom-left
+  shadow = true
+  x = 0
+  action = addtext
+  actionid = f9046ac4-80bf-414f-a5e9-b63aebb3d9f21701635636501
+  y = -9
+  scale = 1.0
+  alignment = left
+  value = Eine Fettsack und Lauch Produktion
 }
 
 customization {
@@ -142,17 +154,5 @@ customization {
   identifier = %id=376346%
   action = setbuttonlabel
   value = Ü
-}
-
-customization {
-  orientation = bottom-left
-  shadow = true
-  x = 0
-  action = addtext
-  actionid = f9046ac4-80bf-414f-a5e9-b63aebb3d9f21701635636501
-  y = -9
-  scale = 1.0
-  alignment = left
-  value = Eine Fettsack und Lauch Produktion
 }
 
