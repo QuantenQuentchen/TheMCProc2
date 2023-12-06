@@ -15,7 +15,7 @@
 	GiveMode = "MOUSE_PICKUP"
 	#Max number of columns shown
 	#Range: 4 ~ 100
-	MaxColumns = 20
+	MaxColumns = 31
 	#Max. recipe gui height
 	#Range: > 175
 	RecipeGuiHeight = 350
@@ -43,7 +43,7 @@
 	CreativeTabSearchMode = "DISABLED"
 	#Search mode for Colors (prefix: ^)
 	#Allowed Values: ENABLED, REQUIRE_PREFIX, DISABLED
-	ColorSearchMode = "DISABLED"
+	ColorSearchMode = "ENABLED"
 	#Search mode for resources IDs (prefix: &)
 	#Allowed Values: ENABLED, REQUIRE_PREFIX, DISABLED
 	ResourceIdSearchMode = "DISABLED"

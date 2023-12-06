@@ -10,6 +10,9 @@
     "redstone": true,
     "repeater": true
   },
+  "tmechworks": {
+    "redstone_machine": true
+  },
   "botanypots": {
     "show_progress": true,
     "show_time": true,
