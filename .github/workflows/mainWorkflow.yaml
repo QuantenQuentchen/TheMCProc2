@@ -38,11 +38,11 @@ jobs:
       uses: sand4rt/ftp-deployer@v1.4
       with:
         sftp: true
-        host: ${{ secrets.SERVER_HOST }}
+        host: "95.208.227.27"
         port: 22
-        username: ${{ secrets.SERVER_USERNAME }}
-        password: ${{ secrets.SERVER_PASSWORD }}
-        remote_folder: ${{ secrets.SERVER_PATH }}
+        username: "singleziphost"
+        password: "singleziphost"
+        remote_folder: "/usr/share/caddy"
         local_folder: '.'
         cleanup: false
         include: '[currentVersion.zip]'
