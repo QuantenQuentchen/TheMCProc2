@@ -24,15 +24,6 @@ jobs:
     - name: Create zip file
       run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
       
-    - name: Upload to SFTP server
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-      with:
-        username: "singleziphost"
-        server: "95.208.227.27"
-        password: "singleziphost"
-        local_path: "./currentVersion.zip"
-        remote_path:  "/usr/share/caddy"
-        args: "-o ConnectionTimeout=5"
 
     - name: FTP Deployer
       uses: sand4rt/ftp-deployer@v1.4
@@ -44,10 +35,8 @@ jobs:
         password: "singleziphost"
         remote_folder: "/usr/share/caddy"
         local_folder: '.'
-        cleanup: false
+        cleanup: true
         include: '[currentVersion.zip]'
-        exclude: '["node_modules/**", "_secret.php", ".github/**", ".git/**", "*.env"]'
-        pasive: true
 
     - name: Delete zip file
       run: rm -r currentVersion.zip
