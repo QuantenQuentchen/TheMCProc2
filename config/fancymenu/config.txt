@@ -1,7 +1,7 @@
 ##[general]
 
 [If menu background sounds added by FancyMenu should be played when a world is loaded.]
-B:playbackgroundsoundsinworld = 'false';
+B:playbackgroundsoundsinworld = 'true';
 B:forcefullscreen = 'false';
 [If menu background sounds added by FancyMenu should be played or not.]
 B:playbackgroundsounds = 'true';
@@ -16,7 +16,7 @@ I:defaultguiscale = '-1';
 ##[customization]
 
 B:advancedmode = 'true';
-B:showcustomizationbuttons = 'true';
+B:showcustomizationbuttons = 'false';
 
 
 ##[mainmenu]

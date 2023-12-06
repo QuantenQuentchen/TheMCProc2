@@ -1,16 +1,1 @@
-{
-  "bookGuiScale": 0,
-  "clickedVisualize": false,
-  "bookData": {
-    "rftoolsbase:manual": {
-      "viewedEntries": [
-        "rftoolsutility:logic/redstone_receiver"
-      ],
-      "bookmarks": [],
-      "history": [
-        "rftoolsutility:logic/redstone_receiver"
-      ],
-      "completedManualQuests": []
-    }
-  }
-}
+{"bookGuiScale":0,"clickedVisualize":false,"bookData":{}}

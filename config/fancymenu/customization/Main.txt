@@ -67,7 +67,7 @@ customization {
   action = custom_layout_element:fancymenu_extension:audio_item
   actionid = 6dcfadfd-870f-4a73-a902-ef06e9ad962d1701570033141
   y = 391
-  audio_source:824c8a91-26f2-4276-bdf2-adf91f2d01bc1701890797376 = menu/Kinder.ogg;EXTERNAL_LOCAL;100;0
+  audio_source:db58b4dd-2841-4461-bb79-906435a2ebc11701893116507 = menu/kinder.ogg;EXTERNAL_LOCAL;100;0
   once_per_session = false
   height = 50
 }
