@@ -25,8 +25,8 @@ jobs:
         username: ${{ secrets.SERVER_USERNAME }}
         server: ${{ secrets.SERVER_HOST }}
         password: ${{ secrets.SERVER_PASSWORD }}
-        local_path: ${{ secrets.SERVER_PATH }}
-        remote_path:  "/usr/share/caddy"
+        local_path: "./currentVersion.zip"
+        remote_path:  ${{ secrets.SERVER_PATH }}
         args: "-o ConnectionTimeout=5"
 
     - name: Delete zip file
