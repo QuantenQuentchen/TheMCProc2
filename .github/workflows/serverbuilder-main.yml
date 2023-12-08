@@ -26,8 +26,8 @@ jobs:
           script: |
             const fs = require('fs');
             const exec = require('child_process').execSync;
-            const includeFile = 'serversYesYes.txt'; // File with paths to include
-            const excludeFile = 'serversNoNos.txt'; // File with paths to exclude
+            const includeFile = 'serverYesYes.txt'; // File with paths to include
+            const excludeFile = 'serverNoNos.txt'; // File with paths to exclude
 
             // Read the include and exclude files and create lists of paths
             const includePaths = fs.readFileSync(includeFile, 'utf-8').split('\n').filter(Boolean);
