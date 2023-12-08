@@ -1,6 +1,4 @@
 /cache
-/saves
-/logs
 /fancymenu_data
 /fancymenu_instance_data
 /fancymenu_setups
@@ -15,3 +13,4 @@
 /usernamecache.json
 /options.txt
 bin/minecraft.jar
+/local
