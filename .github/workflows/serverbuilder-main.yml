@@ -33,12 +33,17 @@ jobs:
             const includePaths = fs.readFileSync(includeFile, 'utf-8').split('\n').filter(Boolean);
             const excludePaths = fs.readFileSync(excludeFile, 'utf-8').split('\n').filter(Boolean);
 
+            // Stash any uncommitted changes
+            exec('git stash --include-untracked');
+
             // Checkout to the 'server' branch and remove all files
             exec('git checkout server');
             exec('git rm -r *');
 
-            // Checkout back to the main branch and copy the included paths excluding the excluded paths
+            // Apply the stashed changes and checkout back to the main branch
+            exec('git stash apply');
             exec('git checkout main');
+
             includePaths.forEach(path => {
               exec(`git checkout server -- ${path}`);
             });
