@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main branch
+      - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          ref: main
+          fetch-depth: 0  # Fetch all history for all branches and tags
 
       - name: Setup Git User
         run: |
@@ -26,20 +26,20 @@ jobs:
           script: |
             const fs = require('fs');
             const exec = require('child_process').execSync;
-            const foldersToTransfer = ['mods', 'config']; // Replace with your folder names
-            const excludeFile = 'serverNoNos.txt'; // Replace with your file name
+            const foldersToTransfer = ['folder1', 'folder2']; // Replace with your folder names
+            const excludeFile = 'serversYesYes.txt'; // Replace with your file name
 
             // Read the exclude file and create a list of files to exclude
             const excludeFiles = fs.readFileSync(excludeFile, 'utf-8').split('\n').filter(Boolean);
 
-            // Checkout to the 'another-branch' and remove all files
+            // Checkout to the 'server' branch and remove all files
             exec('git checkout server');
             exec('git rm -r *');
 
             // Checkout back to the main branch and copy the folders excluding the files
             exec('git checkout main');
             foldersToTransfer.forEach(folder => {
-              exec(`git checkout another-branch -- ${folder}`);
+              exec(`git checkout server -- ${folder}`);
               excludeFiles.forEach(file => {
                 exec(`git rm --cached ${folder}/${file}`);
               });
