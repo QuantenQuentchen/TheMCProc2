@@ -1,0 +1,51 @@
+name: Transfer Folders
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  transfer:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Fetch all history for all branches and tags
+
+      - name: Setup Git User
+        run: |
+          git config --global user.name 'QuantenQuentchen'
+          git config --global user.email 'qquentchen@gmail.com'
+
+      - name: Clear and Transfer Folders
+        uses: actions/github-script@v3
+        with:
+          script: |
+            const fs = require('fs');
+            const exec = require('child_process').execSync;
+            const includeFile = 'serverYesYes.txt'; // File with paths to include
+            const excludeFile = 'serverNoNos.txt'; // File with paths to exclude
+
+            // Read the include and exclude files and create lists of paths
+            const includePaths = fs.readFileSync(includeFile, 'utf-8').split('\n').filter(Boolean);
+            const excludePaths = fs.readFileSync(excludeFile, 'utf-8').split('\n').filter(Boolean);
+
+            // Checkout to the 'server' branch and remove all files
+            exec('git checkout server');
+            exec('git rm -r *');
+
+            // Checkout back to the main branch and copy the included paths excluding the excluded paths
+            exec('git checkout main');
+            includePaths.forEach(path => {
+              exec(`git checkout server -- ${path}`);
+            });
+            excludePaths.forEach(path => {
+              exec(`git rm --cached ${path}`);
+            });
+
+            // Commit and push the changes
+            exec('git commit -m "Transfer folders"');
+            exec('git push origin server');
