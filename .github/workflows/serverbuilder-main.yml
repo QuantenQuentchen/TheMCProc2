@@ -41,7 +41,7 @@ jobs:
             exec('git rm -r *');
 
             // Apply the stashed changes and checkout back to the main branch
-            exec('git stash apply');
+            // exec('git stash apply');
             exec('git checkout main');
 
             includePaths.forEach(path => {
