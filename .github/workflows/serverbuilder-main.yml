@@ -26,7 +26,7 @@ jobs:
           script: |
             const fs = require('fs');
             const exec = require('child_process').execSync;
-            const foldersToTransfer = ['folder1', 'folder2']; // Replace with your folder names
+            const foldersToTransfer = ['mods', 'config']; // Replace with your folder names
             const excludeFile = 'serversYesYes.txt'; // Replace with your file name
 
             // Read the exclude file and create a list of files to exclude
