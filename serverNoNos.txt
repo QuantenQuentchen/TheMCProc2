@@ -1,0 +1,2 @@
+mods/cloth-config-4.17.101-forge.jar
+mods/light-overlay-5.8.1.jar
