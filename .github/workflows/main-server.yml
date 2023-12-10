@@ -30,5 +30,5 @@ jobs:
         password: ${{ secrets.SERVER_PASSWORD }}
         local_path: "./config/*"
         remote_path: "/opt/mcsmanager/daemon/data/InstanceData/6d526b16b87a412abc64e1a333062829/config"
-        delete_remote_files: true
+        delete_remote_files: false
         args: "-o ConnectionTimeout=5"
