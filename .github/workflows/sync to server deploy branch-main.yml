@@ -20,6 +20,13 @@ jobs:
           git config --global user.name 'QuantenQuentchen'
           git config --global user.email 'qquentchen@gmail.com'
 
+      - name: Debug
+        run: |
+          echo "Git Status:"
+          git status
+          echo "Git Branch:"
+          git branch
+
       - name: Sync branches and commit changes
         uses: actions/github-script@v3
         with:
@@ -31,10 +38,19 @@ jobs:
             const excludePaths = fs.readFileSync(excludeFile, 'utf-8').split('\n').filter(Boolean);
             // Checkout to the 'server' branch and merge the 'main' branch
             exec('git checkout server');
-            exec('git merge -s recursive -X ours main');
+            try {
+              exec('git merge -s recursive -X ours main');
+            } catch (error) {
+              console.error('Merge failed:', error);
+              process.exit(1);
+            }
             // Remove the excluded paths
             excludePaths.forEach(path => {
-              exec(`git rm --cached ${path}`);
+              try {
+                exec(`git rm --cached ${path}`);
+            } catch (error) {
+                console.error('Failed to remove ${path}:', error);
+            }
             });
             // Commit and push the changes
             exec('git commit -m "Sync with main branch"');
