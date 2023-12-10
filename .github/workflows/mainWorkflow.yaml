@@ -12,14 +12,24 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
+      with:
+        fetch-depth: 2  # Fetch enough history for all branches and tags and the last commit
+
+    - name: Check if last commit was a GitHub Action
+      id: check
+      run: |
+        git diff --name-only HEAD^..HEAD | grep -q '.github/workflows' && echo "::set-output name=action::true" || echo "::set-output name=action::false"
+
     - name: Install zip
+      if: steps.check.outputs.action == 'false'
       run: sudo apt-get update && sudo apt-get -qq install zip
 
     - name: Create zip file
+      if: steps.check.outputs.action == 'false'
       run: zip -r currentVersion.zip . -x "*.git/*" ".gitignore" ".github/*"
 
     - name: Upload to SFTP server
+      if: steps.check.outputs.action == 'false'
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         username: ${{ secrets.SERVER_USERNAME }}
@@ -30,4 +40,5 @@ jobs:
         args: "-o ConnectionTimeout=5"
 
     - name: Delete zip file
+      if: steps.check.outputs.action == 'false'
       run: rm -r currentVersion.zip
