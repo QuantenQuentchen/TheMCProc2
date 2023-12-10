@@ -1,2 +1,5 @@
 mods/cloth-config-4.17.101-forge.jar
 mods/light-overlay-5.8.1.jar
+mods/ReAuth-1.16-Forge-4.0.1.jar
+mods/embeddiumextras-mc1.16.5_v1.11.4.jar
+mods/auudio_forge_1.0.3-1_MC_1.16.2-1.16.5.jar
