@@ -1,3 +1,4 @@
 mods
 coremods
 defaultconfigs
+config
