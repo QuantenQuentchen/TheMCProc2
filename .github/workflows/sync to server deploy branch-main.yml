@@ -31,7 +31,7 @@ jobs:
             const excludePaths = fs.readFileSync(excludeFile, 'utf-8').split('\n').filter(Boolean);
             // Checkout to the 'server' branch and merge the 'main' branch
             exec('git checkout server');
-            exec('git merge main');
+            exec('git merge main --strategy-option ours');
             // Remove the excluded paths
             excludePaths.forEach(path => {
               exec(`git rm --cached ${path}`);
