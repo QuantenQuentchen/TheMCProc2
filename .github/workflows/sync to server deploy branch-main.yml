@@ -46,11 +46,11 @@ jobs:
             }
             // Remove the excluded paths
             excludePaths.forEach(path => {
-              exec(`git rm --cached ${path}`);
-            });
-            // Remove the excluded paths
-            excludePaths.forEach(path => {
-              exec(`git rm --cached ${path}`);
+              try {
+                exec(`git rm --cached ${path}`);
+            } catch (error) {
+                console.error('Failed to remove ${path}:', error);
+            }
             });
             // Commit and push the changes
             exec('git commit -m "Sync with main branch"');
